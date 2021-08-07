@@ -1,17 +1,38 @@
 import React, { Component } from 'react';
-// import './App.css';
-import Navigation from './Components/Navigation/Navigation';
-import Logo from './Components/Logo/Logo';
-import ImageLinkForm from './Components/ImageLinkForm/ImageLinkForm';
-import 'tachyons'
+import Particles from 'react-particles-js';
+// import Clarifai from 'clarifai';
+// import FaceRecognition from './components/FaceRecognition/FaceRecognition';
+import Navigation from './components/Navigation/Navigation';
+// import Signin from './components/Signin/Signin';
+// import Register from './components/Register/Register';
+import Logo from './components/Logo/Logo';
+import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
+import Rank from './components/Rank/Rank';
+import './App.css';
+
+const particlesOptions = {
+  particles: {
+    number: {
+      value: 30,
+      density: {
+        enable: true,
+        value_area: 800
+      }
+    }
+  }
+}
 
 class App extends Component{
   render(){
     return (
       <div className="App">
+        <Particles className='particles'
+          params={particlesOptions}
+        />
         <header className="App-header">
           <Navigation />
           <Logo />
+          <Rank />
           <ImageLinkForm />
            {/*<FaceRecognition />*/}
   
