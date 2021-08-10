@@ -92,7 +92,7 @@ const app = new Clarifai.App({
              method: 'put',
              headers: {'Content-Type': 'application/json'},
              body: JSON.stringify({
-               id: this.state.user.id
+               id: this.state.user.id     //will only send ID as needed by server.js
              })
            })
              .then(response => response.json())
